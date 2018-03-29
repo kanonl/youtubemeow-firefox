@@ -13,7 +13,7 @@
 
             browser.tabs.create({
                 url: url.toString(),
-                active: true
+                active: localStorage.getItem("foreground") == "true"
             });
         }
     };
