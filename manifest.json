@@ -1,0 +1,27 @@
+{
+    "applications": {
+        "gecko": {
+            "id": "youtubemeow@kan.onl"
+        }
+    },
+    "manifest_version": 2,
+    "name": "YouTubeMeow",
+    "version": "0.0.100",
+    "background": {
+        "scripts": ["assets/js/background.js"]
+    },
+    "description": "Adds a YouTube link on the Google search results page and YouTube search by right-click!",
+    "icons": {
+        "16": "assets/images/icon-16.png",
+        "32": "assets/images/icon-32.png",
+        "48": "assets/images/icon-48.png",
+        "96": "assets/images/icon-96.png",
+        "128": "assets/images/icon-128.png"
+    },
+    "author": "Kanon Lo",
+    "permissions": ["menus"],
+    "content_scripts": [{
+        "matches": ["*://www.google.com/search*"],
+        "js": ["assets/js/content_scripts.js"]
+    }]
+}
