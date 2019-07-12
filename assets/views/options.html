@@ -4,12 +4,19 @@
 <head>
     <title>Options</title>
     <meta charset="utf-8">
+    <style>
+        .input-group {
+            font-size: large;
+        }
+    </style>
 </head>
 
 <body>
     <form>
-        <input type="checkbox" id="foreground">
-        <label for="foreground">Open YouTube searches in foreground</label>
+        <div class="input-group">
+            <input type="checkbox" id="foreground">
+            <label for="foreground">Right-click YouTube search open in foreground</label>
+        </div>
     </form>
     <div id="result"></div>
     <script src="/assets/js/options.js"></script>

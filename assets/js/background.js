@@ -1,6 +1,9 @@
 (function () {
     "use strict";
 
+    let options = localStorage.getItem("options");
+    if (options !== null) options = JSON.parse(options);
+
     const createProperties = {
         title: "Search YouTube for \"%s\"",
         contexts: ["selection"],
@@ -13,7 +16,7 @@
 
             browser.tabs.create({
                 url: url.toString(),
-                active: localStorage.getItem("foreground") == "true"
+                active: options === null ? true : options.foreground
             });
         }
     };
